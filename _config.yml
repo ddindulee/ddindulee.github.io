@@ -300,6 +300,7 @@ tag_archive:
 #   permalinks:
 #     category: /categories/:name/
 #     tag: /tags/:name/
+sidebar: true  # 사이드바 활성화
 
 
 # HTML Compression
