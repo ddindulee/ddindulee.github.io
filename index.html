@@ -1,4 +1,108 @@
----
-layout: home
-author_profile: true
----
+<!DOCTYPE html>
+/* styles.css */
+
+/* 기본 스타일링 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* content 영역에 flexbox 적용 */
+#content {
+  display: flex;
+}
+
+#sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-right: 2px solid #ddd;
+}
+
+#sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#sidebar li {
+  margin: 10px 0;
+}
+
+#sidebar a {
+  text-decoration: none;
+  color: #333;
+}
+
+#main-content {
+  flex-grow: 1;  /* 나머지 공간을 본문이 차지하도록 설정 */
+  padding: 20px;
+}
+
+/* 반응형 디자인: 작은 화면에서 사이드바을 숨기기 */
+@media (max-width: 768px) {
+  #content {
+    flex-direction: column; /* 세로로 쌓이도록 변경 */
+  }
+
+  #sidebar {
+    width: 100%;  /* 작은 화면에서 사이드바가 전체 너비를 차지하도록 변경 */
+    margin-bottom: 20px;
+  }
+
+  #main-content {
+    width: 100%;
+  }
+}
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website</title>
+  <link rel="stylesheet" href="styles.css"> <!-- 스타일 시트 링크 -->
+</head>
+<body>
+  <header>
+    <h1>Your Website Title</h1>
+    <!-- 여기에는 헤더 내용이 들어갑니다 -->
+  </header>
+
+  <div id="content">
+    <!-- 사이드바 -->
+    <div id="sidebar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Categories</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- 본문 콘텐츠 -->
+    <div id="main-content">
+      <p>Welcome to my website!</p>
+      <!-- 본문 내용이 여기에 들어갑니다 -->
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Your Website</p>
+  </footer>
+</body>
+</html>
